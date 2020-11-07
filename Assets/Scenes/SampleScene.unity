@@ -1139,13 +1139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8305a1035bff9489e87b532baa547f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputSource: 0
-  leftController: {fileID: 0}
+  inputSource: 4
+  leftController: {fileID: 618898515}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
   gravity: -9.81
-  additionalHeight: 0
+  additionalHeight: 0.01
   speed: 1
 --- !u!114 &978433354
 MonoBehaviour:
