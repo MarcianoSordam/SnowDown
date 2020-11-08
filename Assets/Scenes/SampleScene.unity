@@ -1285,7 +1285,7 @@ MonoBehaviour:
   triggerPoint: 0.2
   buildTriggerPoint: 2
   rayPointOffset: 2
-  smallWall: {fileID: 9139589102591884473, guid: 527f13d921aad9a4aae15292bbcfdbd4,
+  smallWall: {fileID: 7628982240094690337, guid: 0033d9e07c8154b408a94d267519ac61,
     type: 3}
 --- !u!1 &1745096177
 GameObject:
