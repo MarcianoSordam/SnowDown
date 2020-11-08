@@ -15,7 +15,7 @@ public class DistanceToGround : MonoBehaviour
 
         if (Physics.Raycast(downRay, out hit))
         {
-            if (hit.distance < triggerPoint)
+            if (hit.distance < triggerPoint&&hit.collider.gameObject.tag == "ground")
             {
                 return true;
             }
