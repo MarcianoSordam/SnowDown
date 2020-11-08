@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 66960880}
   - component: {fileID: 66960879}
   - component: {fileID: 66960883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand Controller
   m_TagString: hands
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 127934866}
   - component: {fileID: 127934865}
   - component: {fileID: 127934864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ToolRight
   m_TagString: hands
   m_Icon: {fileID: 0}
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 618898518}
   - component: {fileID: 618898517}
   - component: {fileID: 618898521}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand Controller
   m_TagString: hands
   m_Icon: {fileID: 0}
@@ -1468,7 +1468,7 @@ GameObject:
   - component: {fileID: 689525516}
   - component: {fileID: 689525515}
   - component: {fileID: 689525514}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ToolRight
   m_TagString: hands
   m_Icon: {fileID: 0}
@@ -1560,7 +1560,7 @@ GameObject:
   - component: {fileID: 925268803}
   - component: {fileID: 925268802}
   - component: {fileID: 925268801}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: BuildingParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6319,7 +6319,7 @@ GameObject:
   - component: {fileID: 978433350}
   - component: {fileID: 978433356}
   - component: {fileID: 978433358}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: XR Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7314,7 +7314,7 @@ GameObject:
   - component: {fileID: 1887284364}
   - component: {fileID: 1887284363}
   - component: {fileID: 1887284362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -7472,7 +7472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021303243}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
