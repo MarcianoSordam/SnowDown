@@ -17,6 +17,7 @@ public class WallManager : MonoBehaviour
     public void BuildUp()
     {
         count++;
+        count = Mathf.Clamp(count,0,segments.Length);
         segments[count].SetActive(true);
         health = starthealth;
     }
