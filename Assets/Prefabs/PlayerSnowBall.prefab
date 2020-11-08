@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7875415370998650268}
   - component: {fileID: 3039011269841519250}
   - component: {fileID: 4447730717531165646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSnowBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
