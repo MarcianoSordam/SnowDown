@@ -6,7 +6,7 @@ using TMPro;
 
 public class EnemyController : MonoBehaviour
 {
-    public Camera cam;
+    //public Camera cam;
     public NavMeshAgent agent;
     public Transform player;
     public TextMeshPro healthStatus;

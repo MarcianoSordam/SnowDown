@@ -33,10 +33,7 @@ public class SnowBall : MonoBehaviour
     {
         if (other.gameObject.tag != "hands" && !SumoningSickness)
         {
-            DestroyThis();
-        } else if (other.gameObject.tag == "enemy") {
-            EnemyController ec = other.transform.GetComponent<EnemyController>();
-            ec.TakeDamage(Damage);
+            other.gameObject.SendMessage("TakeDamage",Damage);
             DestroyThis();
         }
     }
