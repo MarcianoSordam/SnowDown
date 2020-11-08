@@ -11,11 +11,12 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public TextMeshPro healthStatus;
     public double health = 5;
+    GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -24,11 +25,14 @@ public class EnemyController : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    public void TakeDamage(double Damage) {
+    public void TakeDamage(double Damage)
+    {
         health -= Damage;
 
-        if (health <= 0) {
-             Destroy(gameObject);
+        if (health <= 0)
+        {
+            gm.ScoreUp();
+            Destroy(gameObject);
         }
 
         healthStatus.text = health.ToString();

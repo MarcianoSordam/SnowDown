@@ -10,13 +10,7 @@ public class GrabSnowBall : MonoBehaviour
     [SerializeField] XRNode inputSource;
     [SerializeField] DistanceToGround distanceToGround;
     [SerializeField] GameObject snowball;
-    [SerializeField] TextMeshPro debugText;
     bool prevState = false;
-
-    // Update is called once per frame
-    void Start(){
-        Debug.Log("I AM ALIVE FOOL!!!");
-    }
     
     void Update()
     {
@@ -32,7 +26,5 @@ public class GrabSnowBall : MonoBehaviour
         {
             prevState = false;
         }
-
-        debugText.text = grip.ToString();
     }
 }
