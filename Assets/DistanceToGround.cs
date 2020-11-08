@@ -14,7 +14,6 @@ public class DistanceToGround : MonoBehaviour
 
     [SerializeField] float rayPointOffset = 2f;
     [SerializeField] GameObject smallWall;
-    [SerializeField] Camera camera;
     float PrevDistance;
 
     float shovCount;
@@ -69,7 +68,7 @@ public class DistanceToGround : MonoBehaviour
 
                 if (Physics.Raycast(downRay, out hit))
                 {
-                    //debugText.text = hit.collider.gameObject.name;
+                    Debug.Log(hit.collider.gameObject.name);
                     if (hit.collider.gameObject.tag == "ground")
                     {
                         //build
@@ -80,6 +79,7 @@ public class DistanceToGround : MonoBehaviour
                     else if (hit.collider.gameObject.tag == "build")
                     {
                         //upgrade
+                        hit.collider.gameObject.SendMessage("BuildLayer");
                         shovCount = 0;
 
                     }
