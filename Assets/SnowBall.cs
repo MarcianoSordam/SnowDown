@@ -8,6 +8,7 @@ public class SnowBall : MonoBehaviour
     [SerializeField] GameObject explosion;
     bool SumoningSickness = true;
     [SerializeField] float lifetime = 30;
+    public double Damage = 1;
 
     bool destroy = false;
 
@@ -29,6 +30,10 @@ public class SnowBall : MonoBehaviour
     {
         if (other.gameObject.tag != "hands" && !SumoningSickness)
         {
+            DestroyThis();
+        } else if (other.gameObject.tag == "enemy") {
+            EnemyController ec = other.transform.GetComponent<EnemyController>();
+            ec.TakeDamage(Damage);
             DestroyThis();
         }
     }
