@@ -9,7 +9,7 @@ public class SnowBall : MonoBehaviour
     bool SumoningSickness = true;
     [SerializeField] float lifetime = 30;
 
-    bool destroy = false;
+    [SerializeField] bool destroy = false;
 
     void Start()
     {
@@ -18,11 +18,14 @@ public class SnowBall : MonoBehaviour
     public void turnOnDestroy()
     {
         destroy = true;
+        Debug.Log("Destroy is on");
     }
 
     public void TurnOffDestroy()
     {
         destroy = false;
+        Debug.Log("Destroy is off");
+
     }
 
     void OnCollisionEnter(Collision other)
@@ -35,11 +38,14 @@ public class SnowBall : MonoBehaviour
 
     public void DestroyThis()
     {
-        //spawn effect
-        GameObject explosionEffect = Instantiate(explosion, transform.position, transform.rotation);
-        //destroy this
-        Destroy(explosionEffect, 2);
-        Destroy(gameObject);
+        if (destroy)
+        {
+            //spawn effect
+            GameObject explosionEffect = Instantiate(explosion, transform.position, transform.rotation);
+            //destroy this
+            Destroy(explosionEffect, 2);
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator RemoveSumoningSickness()
