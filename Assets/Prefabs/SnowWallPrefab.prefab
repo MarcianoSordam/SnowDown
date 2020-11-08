@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2646973180048556765}
   - component: {fileID: 5646745907420758605}
   - component: {fileID: 2898421498384322031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Segment 4
   m_TagString: build
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4149712540450621185}
   - component: {fileID: 4176391146333929081}
   - component: {fileID: 1515281045809942686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Segment 5
   m_TagString: build
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 8737527229676340566}
   - component: {fileID: 5376530809352269103}
   - component: {fileID: 8651202517726012125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Segment 2
   m_TagString: build
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 2809084611456765038}
   - component: {fileID: 3685296977946534392}
   - component: {fileID: 7858363160233853171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Segment 3
   m_TagString: build
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 7867393671816311775}
   - component: {fileID: 7206662834798552461}
   - component: {fileID: 6065999153038417800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Segment 1
   m_TagString: build
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351033968790995092}
   - component: {fileID: 1782166716281744013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnowWallPrefab
   m_TagString: build
   m_Icon: {fileID: 0}
