@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] float delay = 2;
     [SerializeField] float range = 10;
     [SerializeField] float CarrotVelocity = 10;
     [SerializeField] GameObject carrot;
-    [SerializeField] Vector3 offset;
+    [SerializeField] GameObject ShootingPoint;
 
     bool isShooting;
     
@@ -26,11 +25,18 @@ public class EnemyShoot : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        Debug.Log("Shoot");
         //shoot bullet
-        GameObject projectile = (GameObject)Instantiate(carrot, transform.position + offset, transform.rotation);
+        GameObject projectile = (GameObject)Instantiate(carrot, ShootingPoint.transform.position, ShootingPoint.transform.rotation);
         projectile.GetComponent<Rigidbody>().velocity = Vector3.forward * CarrotVelocity;
 
         yield return new WaitForSeconds(delay);
         isShooting = false;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 1, 0, 0.75F);
+        Gizmos.DrawSphere(ShootingPoint.transform.position, .1f);
     }
 }

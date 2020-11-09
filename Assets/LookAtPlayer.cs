@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class LookAtPlayer : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    // Start is called before the first frame update
+    GameObject player;
 
-    // Update is called once per frame
+    void Start()
+    {
+        player = GameObject.Find("Main Camera");
+    }
+
     void FixedUpdate()
     {
         transform.LookAt( new Vector3(player.transform.position.x,transform.position.y,player.transform.position.z));
