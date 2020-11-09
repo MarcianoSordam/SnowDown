@@ -5,19 +5,22 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] float delay = 2;
-    [SerializeField] float range = 10;
+    [SerializeField] float range = 15;
     [SerializeField] float CarrotVelocity = 10;
     [SerializeField] GameObject carrot;
     [SerializeField] GameObject ShootingPoint;
+    [SerializeField] float lifetime = 5; // lifetime of carrot bullets
 
     bool isShooting;
-    
+
     void Update()
     {
         RaycastHit hit;
 
+        Debug.DrawLine(transform.position, transform.TransformDirection(Vector3.forward), Color.red);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, range) && !isShooting)
         {
+            Debug.Log(hit.collider.gameObject.name);
             StartCoroutine(Shoot());
             isShooting = true;
         }
@@ -25,10 +28,11 @@ public class EnemyShoot : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        Debug.Log("Shoot");
+        //Debug.Log("Shoot");
         //shoot bullet
         GameObject projectile = (GameObject)Instantiate(carrot, ShootingPoint.transform.position, ShootingPoint.transform.rotation);
-        projectile.GetComponent<Rigidbody>().velocity = Vector3.forward * CarrotVelocity;
+        Destroy(projectile, lifetime);
+        //projectile.GetComponent<Rigidbody>().velocity = Vector3.forward * CarrotVelocity;
 
         yield return new WaitForSeconds(delay);
         isShooting = false;

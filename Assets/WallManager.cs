@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WallManager : MonoBehaviour
 {
-    [SerializeField] float health = 50;
+    [SerializeField] double health = 50;
     [SerializeField] GameObject[] segments;
-    int count = 0;
-    float starthealth;
+    [SerializeField] int count = 0;
+    double starthealth;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class WallManager : MonoBehaviour
     public void BuildUp()
     {
         count++;
-        count = Mathf.Clamp(count,0,segments.Length-1);
+        count = Mathf.Clamp(count, 0, segments.Length - 1);
         segments[count].SetActive(true);
         health = starthealth;
     }
@@ -30,9 +30,10 @@ public class WallManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        health = starthealth;
     }
 
-    void healthDown(float dmg)
+    public void DmgWall(double dmg)
     {
         health -= dmg;
 

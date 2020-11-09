@@ -5,6 +5,8 @@ using UnityEngine;
 public class Carrot : MonoBehaviour
 {
     public double Damage = 1;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] float CarrotVelocity= 30;
 
     // Start is called before the first frame update
     void Start()
@@ -13,9 +15,9 @@ public class Carrot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rb.velocity = -transform.forward * CarrotVelocity;
     }
 
     void OnCollisionEnter(Collision other)
