@@ -126,5 +126,5 @@ MonoBehaviour:
   rollSpeed: 5
   growSpeed: 0.1
   maxSize: 2
-  delay: 0.1
-  rb: {fileID: 3400609602228944852}
+  damage: 1
+  destroyTime: 5
