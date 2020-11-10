@@ -23,6 +23,7 @@ public class Carrot : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         other.gameObject.SendMessage("TakeDamage",Damage);
+        other.gameObject.SendMessage("DmgWall",Damage);
         Destroy(gameObject);
     }
 }

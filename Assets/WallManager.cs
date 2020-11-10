@@ -30,7 +30,6 @@ public class WallManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        health = starthealth;
     }
 
     public void DmgWall(double dmg)
