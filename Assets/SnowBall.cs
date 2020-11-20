@@ -9,7 +9,7 @@ public class SnowBall : MonoBehaviour
     bool SumoningSickness = true;
     [SerializeField] float lifetime = 30;
     public double Damage = 1;
-
+            
     [SerializeField] bool destroy = false;
 
     void Start()

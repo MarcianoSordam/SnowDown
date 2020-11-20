@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
 {
     //public Camera cam;
     public NavMeshAgent agent;
-    public Transform player;
+    private Transform player;
     public TextMeshPro healthStatus;
     public double health = 5;
     GameManager gm;
@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
